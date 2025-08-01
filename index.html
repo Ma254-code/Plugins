@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VoidStrom Plugins</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Minecraft Plugins</title>
   <style>
+    :root {
+      --bg: #0e0e0e;
+      --card: #1c1c1c;
+      --accent: #4caf50;
+      --text: #f0f0f0;
+      --muted: #999;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #0f0f0f;
-      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     header {
-      background: #1a1a1a;
-      padding: 2rem;
       text-align: center;
-      border-bottom: 2px solid #444;
+      padding: 2.5rem 1rem 1rem;
+      background-color: #151515;
+      border-bottom: 2px solid #2f2f2f;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      color: #00bcd4;
+      font-size: 2.8rem;
+      color: var(--accent);
     }
 
-    .description {
-      text-align: center;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
+    .intro {
       max-width: 800px;
-      margin: 1rem auto;
+      margin: 1.5rem auto;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 0 1rem;
+      line-height: 1.6;
     }
 
-    .plugin-grid {
+    .plugin-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .plugin-card {
-      background: #1e1e1e;
+      background: var(--card);
+      border-radius: 10px;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
       transition: transform 0.2s ease;
     }
 
     .plugin-card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.02);
     }
 
     .plugin-card h2 {
       margin-top: 0;
-      color: #00bcd4;
+      color: var(--accent);
     }
 
     .plugin-card p {
@@ -66,66 +74,71 @@
     }
 
     .plugin-card a {
-      display: inline-block;
-      background: #00bcd4;
+      text-decoration: none;
+      background-color: var(--accent);
       color: #000;
       padding: 0.5rem 1rem;
-      text-decoration: none;
       border-radius: 6px;
+      font-weight: bold;
     }
 
     .custom-request {
       text-align: center;
-      margin: 3rem 1rem 2rem;
       font-size: 1.1rem;
+      padding: 2rem 1rem 1rem;
+      border-top: 1px solid #333;
+      margin-top: 2rem;
     }
 
     .custom-request strong {
-      color: #00bcd4;
+      color: var(--accent);
     }
 
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
-      background: #121212;
+      color: var(--muted);
+      background-color: #121212;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>VoidStrom Plugins</h1>
+    <h1>Meine Minecraft Plugins</h1>
   </header>
 
-  <div class="description">
-    Willkommen! Hier findest du eine Sammlung nützlicher Plugins. Du kannst sie kostenlos herunterladen.  
-    Wenn du ein eigenes Plugin brauchst, schreib mir einfach!
+  <div class="intro">
+    Hier findest du eine Sammlung meiner selbst entwickelten Minecraft-Plugins.<br>
+    Alle Plugins stehen kostenlos zum Download bereit.<br>
+    Bei Fragen oder Wunsch nach einem <strong>individuellen Plugin</strong>, melde dich gerne!
   </div>
 
-  <section class="plugin-grid">
+  <section class="plugin-list">
     <div class="plugin-card">
-      <h2>Plugin A</h2>
-      <p>Ein einfaches Beispiel-Plugin für XYZ-Funktionalität.</p>
-      <a href="plugins/plugin-a.zip" download>Download</a>
+      <h2>AntiGrief</h2>
+      <p>Schützt deine Welt vor unerwünschten Änderungen durch Spieler. Einfach & effektiv.</p>
+      <a href="plugins/AntiGrief.jar" download>Herunterladen</a>
     </div>
+
     <div class="plugin-card">
-      <h2>Plugin B</h2>
-      <p>Ein weiteres nützliches Plugin mit coolen Features.</p>
-      <a href="plugins/plugin-b.zip" download>Download</a>
+      <h2>TeleportPlus</h2>
+      <p>Ermöglicht /home, /spawn und weitere Teleport-Befehle mit konfigurierbarer Wartezeit.</p>
+      <a href="plugins/TeleportPlus.jar" download>Herunterladen</a>
     </div>
-    <!-- Weitere Plugins kannst du hier einfach einfügen -->
+
+    <!-- Weitere Plugins kannst du hier einfach hinzufügen -->
   </section>
 
   <div class="custom-request">
-    Für <strong>benutzerdefinierte Plugins</strong> oder Anfragen schreibe an  
+    Du brauchst ein <strong>eigenes Plugin</strong>?<br>
+    Schreib mir einfach eine Anfrage an:<br>
     <strong>ma254@voidstrom.de</strong>
   </div>
 
   <footer>
-    © 2025 VoidStrom - Alle Rechte vorbehalten
+    © 2025 – Alle Rechte vorbehalten.
   </footer>
 
 </body>
